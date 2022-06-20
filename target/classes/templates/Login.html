@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>PVCE</title>
+<style>
+        body {
+            height: 100vh;
+            
+        }
+
+        * {
+            margin: 0;
+        }
+
+        .container-fluid {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+
+       body {
+
+             background-image: url("https://demo.tutorialzine.com/2010/07/making-slick-mobileapp-website-jquery-css/img/bokeh.jpg");           
+             
+            background-repeat: no-repeat;
+          
+            background-size: cover;   
+       
+       
+   }
+   
+      
+        .Right {
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #8ca7f1;
+            border-radius: 20px;
+            padding: 30px;
+            }
+            .index{
+            margin-top:100px;
+            
+
+        }
+        h1
+        {
+        background-color:#ff355e;
+        text-align:center;
+        color:white;
+         }
+
+    </style>
+    
+
+ 
+
+</head>
+
+
+<body>
+<div><h1>PV College OF Engineering </h1></div>
+
+<center>
+<form action="#"  th:action="@{/Login}"  th:object="${adduserlogin}" method="post">
+<br><br><br>Username<br><input type="text" th:field="*{username}"required><br>
+
+<label for="password">Password</label><br>
+  <input type="password" id="password" name="password"/> <br>
+
+<br><button type="submit" class="btn btn-primary"><br>Sign up</button><br>
+</form>
+
+<br><br><br><br><br><br>
+<br>
+<hr>or login with<hr><br>
+	<a href="http://www.google.com/">
+	<button>GOOGLE</button></a>
+    <a href="https://www.facebook.com/">
+    <button>FACEBOOK</button></a><br><br><br>
+	
+	<footer>copyrights@ pvce1234@gmail.com</footer>
+</center>
+
+
+
+</body>
+</html>

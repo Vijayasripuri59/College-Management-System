@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link rel="stylesheet" type="text/javascript" th:href="@{/webjars/bootstrap/js/bootstrap.bundle.min.js}"/>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+  <meta charset="UTF-8">
+  <title>PVCE</title>
+  <style>
+   body {
+    height: 100vh;
+    color:white;
+    }
+
+    * {
+    margin: 0;
+    }
+  
+     body {
+     color:white;
+      background-image: url("https://www.yorkhotel.com.sg/uploads/9/8/1/8/98182264/accomplishment-celebrate-ceremony-267885_orig.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    
+    .formde{
+      margin: 2rem 30rem 2rem;
+    }
+    h2{
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+  
+
+</head>
+
+<body class="student.png">
+<nav class="navbar font-weight-bold navbar-expand-lg navbar-light bg-light container">
+  <a class="navbar-brand container font-weight-bold" href="#" >Edit Students in College</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+   <a class="h4 mr-3 btn btn-secondary btn-sm" th:href="@{'/Login'}">Back</a>
+   
+
+  </div>
+</nav>
+
+<div class="formde">
+
+  <form th:action="@{UpdateStudent}" method="post" th:object="${student}">
+
+    <input type="hidden" th:field="*{ID}">
+
+    <div class="form-group">
+      <label >Name</label>
+      <input type="text" class="form-control" th:field="*{Name}">
+    </div>
+
+    <div class="form-group">
+      <label >Age</label>
+      <input type="number" class="form-control" th:field="*{Age}">
+    </div>
+
+    
+
+   
+
+    <div class="form-group">
+      <label >Address</label>
+      <input type="text" class="form-control" th:field="*{Address}">
+    </div>
+
+
+    <div class="form-group">
+      <label >email</label>
+      <input type="text" class="form-control" th:field="*{email}">
+    </div>
+
+    <input type="hidden" th:field="*{parents.ID}">
+
+    <div class="form-group">
+      <label >MotherName</label>
+      <input type="text" class="form-control" th:field="*{parents.MotherName}">
+    </div>
+
+    <div class="form-group">
+      <label >FatherName</label>
+      <input type="text" class="form-control" th:field="*{parents.FatherName}">
+    </div>
+
+    <div class="form-group">
+      <label >Address</label>
+      <input type="text" class="form-control" th:field="*{parents.Address}">
+    </div>
+
+   
+<br><br>   
+
+   <button type="submit" class="btn btn-primary">Edit </button>
+   
+   <button type="reset" class="btn btn-primary">Reset</button>
+  </form>
+</div>
+</body>
+</html>
